@@ -543,6 +543,7 @@ body{
   #mail,#tel{
     width: 50%;
     height: 100px;
+    
   }
   .page-up{
     width: 75px;
@@ -604,6 +605,7 @@ body{
     height: 80px;
     width: 50%;
     top: 30px;
+    line-height:80px;
   }
   #mail{
     font-size: 13px;
@@ -611,6 +613,7 @@ body{
     top: 30px;
     width: 50%
     top:20px;
+    line-height:80px;
   }
   address,footer{
     font-size: 16px;
