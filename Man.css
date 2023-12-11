@@ -80,9 +80,9 @@ article img{ /*размер изображений слайдера*/
 
  figcaption {
     margin-top: 5px;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: uppercase;
-    font-family: 10px/14px 'Montserrat', Arial;
+    font-family: 'Montserrat', Arial;
  }
  #back{
    position: absolute;
