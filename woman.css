@@ -1,0 +1,429 @@
+@import url('https://fonts.google.com');
+html{
+  padding: 0;
+  margin: 0;
+  margin-top: 0px;
+  font-family:'CirceRounded',Arial,sans-serif;
+  font-size: 18px;
+}
+.shapka{
+  height: 150px;
+  color: white;
+  right:300px;
+  text-align: center;
+  background: #48729c;
+  line-height: 140px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-indent: 300px;
+  z-index: 1111;
+}
+.picture-shapka{
+  position: absolute;
+  border-radius: 1px;
+  height: 150px;
+}
+
+h1{
+  font-size: 50px;
+}
+h2{
+  text-align: center;
+  font-size:40px;
+  background-color: #C499BA;
+  color: white;
+  height: 70px;
+  line-height: 60px;
+}
+
+#Category{
+  background-color: #E4A5FF;
+  margin: 0;
+  z-index: 10;
+  height: 100px;
+  line-height: 90px;
+}
+#Dolls{
+  margin-top: 0;
+}
+#Наши-контакты{
+  background: #34495e;
+  margin-top: 0px;
+}
+nav {
+  font-family: Montserrat;
+  height:150px;
+  width: 100%;
+  background: #34495e;
+  position: relative;
+  z-index: 444
+}
+label.logo{
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  left: 0;
+  padding: 0 40px;
+  line-height:140px;
+}
+article img{ /*размер изображений слайдера*/
+	width: 70%;
+  height:70%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    font-size: 0; /* Убираем пробелы между картинками */
+}
+
+ .image-container {
+    padding: 5px;
+    border: 2px solid #FFBF00;
+    text-align: center;
+    border-radius: 3px;
+
+ }
+ .image-container:hover{
+   transform: scale(1.03);
+   transition: transform 1.3s ;
+ }
+
+ .container img {
+    width: 200px;
+    height: 200px;
+ }
+
+ figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 10px/14px 'Montserrat', Arial;
+ }
+ #back{
+   position: absolute;
+   height: 80px;
+   right: 30px;
+   opacity: 0.6;
+   margin-top: 11px;
+   color: white;
+   top: 20px;
+ }
+#slider1 { /*положение слайдера*/
+    position: relative;
+	text-align: center;
+    top: 10px;
+}
+
+#slider1{ /*центровка слайдера*/
+	margin: 0 auto;
+}
+
+#slides1 article{ /*все изображения справа друг от доруга*/
+	width: 20%;
+	float: left;
+}
+
+#slides1 .image1{ /*устанавливает общий размер блока с изображениями*/
+	width: 500%;
+	line-height: 0;
+}
+
+#overflow1{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+
+
+#desktop1:checked ~ #slider1{ /*размер всего слайдера*/
+	max-width: 550px; /*максимальнная длинна*/
+
+}
+
+/*настройка переключения и положения для левой стрелки*/
+/*если свич1-5 активны, то идет обращение к лейблу из блока с id контролс*/
+#switch11:checked ~ #controls1 label:nth-child(5),
+#switch21:checked ~ #controls1 label:nth-child(1),
+#switch31:checked ~ #controls1 label:nth-child(2),
+#switch41:checked ~ #controls1 label:nth-child(3),
+#switch51:checked ~ #controls1 label:nth-child(4){
+	background: url('prev1.png') no-repeat; /*заливка фона картинкой без повторений*/
+	float: left;
+	margin: 0 0 0 -84px; /*сдвиг влево*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+/*настройка переключения и положения для правой стрелки*/
+#switch11:checked ~ #controls1 label:nth-child(2),
+#switch21:checked ~ #controls1 label:nth-child(3),
+#switch31:checked ~ #controls1 label:nth-child(4),
+#switch41:checked ~ #controls1 label:nth-child(5),
+#switch51:checked ~ #controls1 label:nth-child(1){
+	background: url('next1.png') no-repeat; /*заливка фона картинкой без повторений*/
+	float: right;
+	margin: 0 -84px 0 0; /*сдвиг вправо*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+.all1 input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
+	display: none;
+}
+
+/*позиция изображения при активации переключателя*/
+#switch11:checked ~ #slides1 .image1{
+	margin-left: 0;
+}
+
+#switch21:checked ~ #slides1 .image1{
+	margin-left: -100%;
+}
+
+#switch31:checked ~ #slides1 .image1{
+	margin-left: -200%;
+}
+
+#switch41:checked ~ #slides1 .image1{
+	margin-left: -300%;
+}
+
+#switch51:checked ~ #slides1 .image1{
+	margin-left: -400%;
+}
+
+#controls1{ /*положение блока всех управляющих элементов*/
+	margin: -25% 0 0 0;
+	width: 100%;
+	height: 50px;
+}
+
+#active1 label{ /*стиль отдельного переключателя*/
+	border-radius: 10px; /*скругление углов*/
+	display: inline-block; /*расположение в строку*/
+	width: 15px;
+	height: 15px;
+	background: #bbb;
+}
+
+#active1{ /*расположение блока с переключателями*/
+	margin: 23% 0 0;
+	text-align: center;
+}
+
+#active1 label:hover{ /*поведение чекбокса при наведении*/
+	background: #76c8ff;
+	border-color: #777 !important; /*выполнение в любом случае*/
+}
+
+/*цвет активного лейбла при активации чекбокса*/
+#switch11:checked ~ #active1 label:nth-child(1),
+#switch21:checked ~ #active1 label:nth-child(2),
+#switch31:checked ~ #active1 label:nth-child(3),
+#switch41:checked ~ #active1 label:nth-child(4),
+#switch51:checked ~ #active1 label:nth-child(5){
+	background: #18a3dd;
+	border-color: #18a3dd !important;
+}
+
+#slides1 .image1{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls1 label:hover{ /*прозрачность стрелок при наведении*/
+	opacity: 0.6;
+}
+
+#controls1 label{ /*прозрачность стрелок при отводе курсора*/
+	transition: opacity 0.2s ease-out;
+}
+
+
+
+
+
+
+footer{
+
+  background: #34495e;
+  color: white;
+  border-radius: 3px;
+  font-size:22px;
+  position: relative;
+  text-align: center;
+  top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+address{
+  font: italic small-caps bold 22px/2 cursive;
+  position: relative ;
+  outline: none;
+  display: inline-flex;
+  color:white;
+  background: #48729c;
+  padding: 0px;
+  margin-bottom: 30px;
+}
+#mail:hover,#tel:hover{
+  background: linear-gradient(to bottom right, #a8c0ff, #3f2b96);
+  transform: scale(1.05);
+  transition: transform 1.3s;
+}
+#tel{
+  color: white;
+  text-decoration: none;
+  position: static;
+
+  border-style: solid;
+  border-color: #34495e;
+  padding: 25px;
+  width:200PX;
+}
+#mail{
+  color: white;
+  text-decoration: none;
+  width:250px;
+  position: static;
+  padding:25px;
+
+  border-style: solid;
+  border-color: #34495e;
+  justify-content: center;
+}
+body{
+  margin:0;
+}
+blockquote{
+  font-size:35px;
+  text-align: center;
+  padding-bottom: : 550px;
+  margin:0;
+}
+
+h3{
+  font-size: 26px;
+  text-align: center;
+}
+.pod{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.page-up{
+  position: fixed;
+  right: 0;
+  transform: rotate(180deg);
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  margin: 0 13px 13px 0;
+  animation: jump 2.5s infinite;
+  z-index: 111111111;
+}
+
+@keyframes jump {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(13px);
+  }
+
+  60%{
+    transform: translateY(5px);
+  }
+}
+@media screen and (max-width: 450px) {
+  iframe{
+    width:350px;
+    height: 200px;
+  }
+  html{
+    font-size: 16px;
+  }
+  div .image-container{
+    width:100px;
+    height:150px;
+  }
+  .image-container img{
+    width:100px;
+    height: 100px;
+  }
+
+  h2{
+    font-size: 24px;
+  }
+  .all1{
+    width:50%;
+    height:50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  label.logo{
+    padding-left: 10px;
+  }
+  #tel,#mail{
+    font-size: 15px;
+    height: 50px;
+    width: 100px;
+  }
+  address{
+    height: 120px;
+  }
+}
+@media screen and (max-width: 450px) {
+  iframe{
+    width:300px;
+    height: 200px;
+  }
+
+  div .image-container{
+    width:80px;
+    height:150px;
+  }
+  .image-container img{
+    width:80px;
+    height: 80px;
+  }
+  figcaption{
+    font-size: 12px;
+  }
+
+  h2{
+    font-size: 24px;
+  }
+  .all1{
+    width:45%;
+    height:45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  label.logo{
+    padding-left: 10px;
+      font-size: 37px;
+  }
+  #tel,#mail{
+    font-size: 14px;
+    padding-top: 0;
+    height: 70px;
+    line-height:35px;
+    width: 80px;
+  }
+  address{
+    height: 100px;
+    font-size: 14px;
+  }
+  footer{
+    font-size: 16px;
+  }
+}
