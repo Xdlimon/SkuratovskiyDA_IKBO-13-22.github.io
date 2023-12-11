@@ -41,7 +41,7 @@ html{
 }
 pre{
   font: italic small-caps bold 20px cursive;
-  text-align: center;
+  text-align: left;
 }
 h1{
   font-size: 50px;
@@ -594,7 +594,6 @@ body{
   pre{
     font-size: 14px;
     text-align: left;
-    margin-right: 20px;
   }
   iframe{
     width:300px;
